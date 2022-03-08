@@ -1,4 +1,4 @@
-<mat-accordion>
+<mat-accordion multi="true">
   <mat-expansion-panel *ngFor="let teachingUnit of teachingUnits">
     <mat-expansion-panel-header>
       <mat-card-title>{{ teachingUnit.name }}</mat-card-title>
@@ -7,7 +7,7 @@
       <mat-card class="grade" *ngFor="let grade of teachingUnit.grades">
         <mat-card-header>
           <mat-card-title>{{ grade.label }}</mat-card-title>
-          <span class="grade-value">{{ grade.value }}</span>
+          <span [style.color]="getGradeColor(grade)" class="grade-value">{{ grade.value }}</span>
         </mat-card-header>
       </mat-card>
     </div>
