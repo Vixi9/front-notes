@@ -1,4 +1,5 @@
 export interface Grade {
-  label: string;
+  label: string,
+  coefficient: number;
   value: number;
 }

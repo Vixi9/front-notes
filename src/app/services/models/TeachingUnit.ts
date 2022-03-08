@@ -1,6 +1,7 @@
-import { Grade } from 'src/app/services/models/Grade';
+import { Teaching } from 'src/app/services/models/Teaching';
 
 export interface TeachingUnit {
   name: string;
-  grades: Grade[];
+  code: string;
+  teachings: Teaching[];
 }

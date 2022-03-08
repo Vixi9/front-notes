@@ -14,27 +14,12 @@ export class GradesComponent {
 
   constructor() {
     this.teachingUnits = [
-      { name: "Sciences appliquées", grades: [
-          { label: "Analyse", value: 5 },
-          { label: "Analyse", value: 10 },
-          { label: "Analyse", value: 17 },
-          { label: "Analyse", value: 17 },
-          { label: "Analyse", value: 17 },
-          { label: "Analyse", value: 17 },
-        ]
+      { name: "Sciences appliquées", code: "", teachings: [
+        { label: "Analyse", grades: [
+            { label: "TP d'analyse", value: 15, coefficient: 1 },
+          ],
+        }],
       },
-      { name: "Informatique", grades: [
-          { label: "Analyse", value: 9 },
-          { label: "Analyse", value: 20 },
-          { label: "Analyse", value: 14 },
-        ]
-      },
-      { name: "Humanités", grades: [
-          { label: "Analyse", value: 15 },
-          { label: "Analyse", value: 10.5 },
-          { label: "Analyse", value: 12 },
-        ]
-      }
     ];
   }
 
