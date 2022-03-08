@@ -1,0 +1,6 @@
+<mat-list role="list">
+    <a mat-list-item *ngFor="let link of links" role="listitem" [routerLink]="link.reference">
+        <mat-icon>{{ link.icon }}</mat-icon>
+        <span>{{ link.text }}</span>
+    </a>
+</mat-list>
