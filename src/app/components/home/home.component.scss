@@ -1,0 +1,16 @@
+.home-background {
+  width: 100%;
+  min-height: calc(100vh - 84px);
+  background-image: url("../../../assets/images/5293.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50vh;
+  background-color: white;
+
+  text-align: center;
+
+  .label {
+    position: relative;
+    top: 65vh;
+  }
+}

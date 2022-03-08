@@ -1,6 +1,6 @@
 <mat-sidenav-container autosize>
     <mat-sidenav class="sidenav" #sidenav role="navigation">
-        <app-sidenav-list></app-sidenav-list>
+        <app-sidenav-list (sidenavToggle)="sidenav.toggle()"></app-sidenav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content">
         <app-header (sidenavToggle)="sidenav.toggle()"></app-header>

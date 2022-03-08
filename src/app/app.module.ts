@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { GradesComponent } from './grades/grades.component';
-import { HeaderComponent } from './header/header.component';
+import { GradesComponent } from './components/grades/grades.component';
+import { HeaderComponent } from './components/navigation/header/header.component';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
+import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [

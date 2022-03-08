@@ -1,0 +1,15 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let teachingUnit of teachingUnits">
+    <mat-expansion-panel-header>
+      <mat-card-title>{{ teachingUnit.name }}</mat-card-title>
+    </mat-expansion-panel-header>
+    <div class="mat-card-grid-layout">
+      <mat-card class="grade" *ngFor="let grade of teachingUnit.grades">
+        <mat-card-header>
+          <mat-card-title>{{ grade.label }}</mat-card-title>
+          <span class="grade-value">{{ grade.value }}</span>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

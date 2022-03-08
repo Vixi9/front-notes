@@ -1,0 +1,6 @@
+<mat-nav-list role="list">
+    <mat-list-item *ngFor="let link of links" role="listitem"  (click)="sidenavToggle.emit()" class="listitem">
+      <mat-icon>{{ link.icon }}</mat-icon>
+      <a matLine [routerLink]="link.reference">{{ link.text }}</a>
+    </mat-list-item>
+</mat-nav-list>

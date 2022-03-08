@@ -1,0 +1,27 @@
+.mat-card-grid-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+
+  mat-card-header {
+    justify-content: space-between;
+  }
+
+  .grade-value {
+    font-size: xx-large;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .mat-card-grid-layout {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}
