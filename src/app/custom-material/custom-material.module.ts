@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   exports: [
@@ -15,7 +16,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatCardModule,
     MatSidenavModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTableModule
   ]
 })
 export class CustomMaterialModule { }

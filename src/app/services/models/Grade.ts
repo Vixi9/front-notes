@@ -1,5 +1,6 @@
 export interface Grade {
-  label: string,
+  name: string,
   coefficient: number;
   value: number;
+  scale?: number;
 }
