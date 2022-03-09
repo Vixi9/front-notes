@@ -20,4 +20,4 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule
   ]
 })
-export class CustomMaterialModule { }
+export class CustomMaterialModule {}

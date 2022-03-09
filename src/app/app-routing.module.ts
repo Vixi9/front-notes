@@ -5,12 +5,16 @@ import { HomeComponent } from './components/home/home.component';
 import { GradesResolver } from './services/grades.resolver';
 
 const routes: Routes = [
-  { path: "grades", component: GradesComponent, resolve: {gradesData: GradesResolver} },
-  { path: "", component: HomeComponent },
+  {
+    path: 'grades',
+    component: GradesComponent,
+    resolve: { gradesData: GradesResolver }
+  },
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

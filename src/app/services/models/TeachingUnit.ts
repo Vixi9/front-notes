@@ -9,7 +9,7 @@ export class TeachingUnit implements TeachingUnitInterface {
   name?: string | undefined;
   teachings: Teaching[];
 
-  constructor() { 
-    this.teachings = []
+  constructor() {
+    this.teachings = [];
   }
 }

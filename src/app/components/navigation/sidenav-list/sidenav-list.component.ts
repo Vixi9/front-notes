@@ -5,19 +5,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './sidenav-list.component.html',
   styleUrls: ['./sidenav-list.component.scss']
 })
-export class SidenavListComponent implements OnInit {
-
+export class SidenavListComponent {
   @Output() public sidenavToggle: EventEmitter<any> = new EventEmitter();
 
   public links: any[] = [
-    { reference: "", text: "Accueil", icon: "home" },
-    { reference: "/grades", text: "Notes", icon: "grade" }
+    { reference: '', text: 'Accueil', icon: 'home' },
+    { reference: '/grades', text: 'Notes', icon: 'grade' }
   ];
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
+  constructor() {}
 }

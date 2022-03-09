@@ -23,7 +23,7 @@ import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
     GradesComponent,
     HeaderComponent,
     HomeComponent,
-    SidenavListComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,10 +39,7 @@ import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [
-    GradesResolver,
-    GradesService,
-  ],
+  providers: [GradesResolver, GradesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
