@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GradesComponent } from './components/grades/grades.component';
-import { HomeComponent } from './components/home/home.component';
 import { GradesResolver } from './services/grades.resolver';
+import { NgModule } from '@angular/core';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {

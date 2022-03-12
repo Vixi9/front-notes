@@ -1,4 +1,28 @@
-<mat-accordion multi="true">
+<table class="grade-table" mat-table fxHide.lt-md [dataSource]="flatGrades">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Nom </th>
+    <td mat-cell *matCellDef="let flatGrade"> {{ flatGrade.name }} </td>
+  </ng-container>
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef> Code </th>
+    <td mat-cell *matCellDef="let flatGrade"> {{ flatGrade.code }} </td>
+  </ng-container>
+  <ng-container matColumnDef="coefficient">
+    <th mat-header-cell *matHeaderCellDef> Coefficient </th>
+    <td mat-cell *matCellDef="let flatGrade"> {{ flatGrade.coefficient }} </td>
+  </ng-container>
+  <ng-container matColumnDef="value">
+    <th mat-header-cell *matHeaderCellDef> Note </th>
+    <td mat-cell *matCellDef="let flatGrade"> {{ flatGrade.value }} </td>
+  </ng-container>
+  <ng-container matColumnDef="scale">
+    <th mat-header-cell *matHeaderCellDef> Barème </th>
+    <td mat-cell *matCellDef="let flatGrade"> {{ flatGrade.scale }} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-accordion fxHide.gt-md multi="true">
   <mat-expansion-panel *ngFor="let teachingUnit of teachingUnits">
     <mat-expansion-panel-header>
       <mat-panel-title>{{ teachingUnit.name }}</mat-panel-title>

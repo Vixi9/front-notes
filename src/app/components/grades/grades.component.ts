@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  ActivatedRoute,
-  ActivatedRouteSnapshot,
-  Router
-} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { FlatGrade } from 'src/app/services/models/FlatGrade';
+import { FlatGradeTreeService } from 'src/app/services/flat-grade-tree.service';
 import { Grade } from 'src/app/services/models/Grade';
 import { TeachingUnit } from 'src/app/services/models/TeachingUnit';
 
@@ -14,15 +12,33 @@ import { TeachingUnit } from 'src/app/services/models/TeachingUnit';
 })
 export class GradesComponent implements OnInit {
   public teachingUnits: TeachingUnit[];
+  public flatGrades: FlatGrade[];
+  public displayedColumns: String[] = [
+    'name',
+    'code',
+    'coefficient',
+    'value',
+    'scale'
+  ];
+  private route: ActivatedRoute;
+  private flatGradeTreeService: FlatGradeTreeService;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(
+    route: ActivatedRoute,
+    flatGradeTreeService: FlatGradeTreeService
+  ) {
+    this.route = route;
+    this.flatGradeTreeService = flatGradeTreeService;
     this.teachingUnits = [];
+    this.flatGrades = [];
   }
 
   ngOnInit(): void {
     this.route.data.subscribe((data) => {
       this.teachingUnits = data['gradesData'] as [];
-      console.log(this.teachingUnits);
+      this.flatGrades = this.flatGradeTreeService.toFlatGradeTree(
+        data['gradesData']
+      );
     });
   }
 

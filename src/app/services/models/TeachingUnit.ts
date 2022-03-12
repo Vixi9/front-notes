@@ -6,10 +6,11 @@ export interface TeachingUnitInterface {
 }
 
 export class TeachingUnit implements TeachingUnitInterface {
-  name?: string | undefined;
+  name: string;
   teachings: Teaching[];
 
-  constructor() {
+  constructor(name: string) {
+    this.name = name;
     this.teachings = [];
   }
 }
